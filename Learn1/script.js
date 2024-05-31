@@ -4,9 +4,14 @@ class PrintBubbles {
     this.number = number;
   }
   addBubble() {
-    console.log(this);
+    for (var i = 1; i <= this.number; i++) {
+      var bubble = document.createElement("div");
+      bubble.classList.add("bubble");
+      bubble.textContent = 66;
+      document.querySelector(this.parent).appendChild(bubble);
+    }
   }
 }
 
-let bubbles = new PrintBubbles(".app", 44);
+let bubbles = new PrintBubbles(".app", 8);
 bubbles.addBubble();
